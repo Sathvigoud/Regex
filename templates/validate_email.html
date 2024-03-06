@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Validation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Email Validation</h1>
+
+    {% if is_valid %}
+        <p style="color: green;">{{ validation_message }}</p>
+    {% else %}
+        <p style="color: red;">{{ validation_message }}</p>
+    {% endif %}
+
+    <p>Entered email: {{ email }}</p>
+
+    <a href="/">Back to Regex Tester</a>
+</body>
+</html>
